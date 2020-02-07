@@ -7,9 +7,7 @@
 
 int main(void)
 {
-char str[58] = "with proper grammar, but the outcome is a piece of art,";
-
-printf("%s \n" , str);
-
+  // displays the string inside quotations
+printf("with proper grammar, but the outcome is a piece of art,");
 return (0);
 }
