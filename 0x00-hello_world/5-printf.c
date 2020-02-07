@@ -5,11 +5,11 @@
  * Return: Always 0 (success)
  */
 
-int main()
+int main(void)
 {
-char str[60] = "with proper grammar, but the outcome is a piece of art,";
+char str[58] = "with proper grammar, but the outcome is a piece of art,";
 
-printf("%s \n", str);
+printf("%s \n" , str);
 
 return (0);
 }
