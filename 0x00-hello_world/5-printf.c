@@ -5,7 +5,7 @@
  * Return: Always 0 (success)
  */
 
-int main(void)
+int main()
 {
 char str[60] = "with proper grammar, but the outcome is a piece of art,";
 
