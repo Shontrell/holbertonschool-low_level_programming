@@ -8,10 +8,10 @@
 
 int main(void)
 {
-char arr[10] = "Holberton";
+char arr[9] = "Holberton";
 int A = 0;
 
-while (A < 10)
+while (A < 9)
 {
 _putchar(arr[A]);
 A++;
