@@ -6,8 +6,16 @@
  * Return: 0
  */
 
-int main (void)
+int main(void)
 {
-  _putchar(Holberton);
-  return 0;
+char arr[10] = "Holberton";
+int A = 0;
+
+while (A < 10)
+{
+_putchar(arr[A]);
+A++;
+}
+_putchar('\n');
+return (0);
 }
