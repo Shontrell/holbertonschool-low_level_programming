@@ -5,7 +5,7 @@
  *
  * @n: int passed as argument to the function
  *
- * Return : 0 success
+ * Return: 0
  */
 void print_to_98(int n)
 {
@@ -29,5 +29,9 @@ void print_to_98(int n)
 			}
 			printf("%d\n", n);
 		}
+			else
+			{
+			printf("%d\n", n);
+			}
 	}
 }
