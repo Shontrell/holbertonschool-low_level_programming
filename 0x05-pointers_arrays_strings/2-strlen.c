@@ -1,6 +1,6 @@
 #include "holberton.c"
 /**
- * _strlen = returns the length of a string
+ * _strlen - returns the length of a string
  *
  * @s: string being measured for length
  *
@@ -8,10 +8,11 @@
  */
 int _strlen(char *s)
 {
-	int len;
+	int len = 0;
 
-	for (len = 0; *(s + len) != '/0'; len++)
+	while (*(s + len) != '/0')
 	{
+		len++;
 	}
-return (len)
-	}
+	return (len)
+		}
