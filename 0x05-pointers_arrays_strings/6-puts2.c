@@ -9,13 +9,12 @@
 void puts2(char *str)
 {
 	int string = 0;
+	int even = 0;
 
 	while (str[string] != '\0')
 	{
 		string++;
 	}
-
-	int even = 0;
 
 	while (even < string)
 	{
