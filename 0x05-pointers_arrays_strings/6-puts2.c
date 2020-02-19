@@ -12,8 +12,15 @@ void puts2(char *str)
 
 	while (str[string] != '\0')
 	{
-		_putchar(str[string]);
-		string = string + 2;
+		string++;
+	}
+
+	int even = 0;
+
+	while (even < string)
+	{
+		_putchar(str[even]);
+		even = even + 2;
 	}
 	_putchar('\n');
 }
