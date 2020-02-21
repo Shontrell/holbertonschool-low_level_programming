@@ -12,7 +12,7 @@ char *leet(char *str)
 
 	while (str[x] != '\0')
 	{
-		for (y = 0 ;y < 10; y++)
+		for (y = 0 ; y < 10; y++)
 		{
 			if (str[x] == arr2[y])
 			{
