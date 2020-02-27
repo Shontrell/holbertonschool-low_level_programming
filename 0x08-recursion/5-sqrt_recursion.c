@@ -7,13 +7,13 @@
  */
 int findsr(int sr, int s)
 {
-	if ((s * s) == sr)
-	{
-		return (s);
-	}
 	if ((s * s) > sr)
 	{
 		return (-1);
+	}
+	if ((s * s) == sr)
+	{
+		return (s);
 	}
 	return (findsr(sr, s + 1));
 }
