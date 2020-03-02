@@ -1,12 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - Entry point
  * @argc: int
  * @argv: pointer
  * Return: 0
  */
-int atoi(char *argv);
-
 int main(int argc, char *argv[])
 {
 	int i, mul = 1;
