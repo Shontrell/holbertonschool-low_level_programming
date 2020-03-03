@@ -18,6 +18,7 @@ char *create_array(unsigned int size, char c)
 		{
 			x[count] = c;
 		}
+		x[count] = '\0';
 		return (x);
 	}
 	else
