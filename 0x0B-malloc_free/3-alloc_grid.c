@@ -30,6 +30,7 @@ int **alloc_grid(int width, int height)
 			}
 			else
 			{
+				free(p[row]);
 				return (NULL);
 			}
 		}
@@ -37,6 +38,7 @@ int **alloc_grid(int width, int height)
 	}
 	else
 	{
+		free(p);
 		return (NULL);
 	}
 }
