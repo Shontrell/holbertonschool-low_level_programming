@@ -36,16 +36,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		free(newstr);
 		return (NULL);
 	}
-	if (newstr)
-	{
-		for (c = 0; c < a; c++)
-			newstr[c] = s1[c];
-		for (c = a; c <= (a + b); c++, d++)
-			newstr[c] = s2[d];
-		return (newstr);
-	}
-	else
-	{
-		return (NULL);
-	}
+	for (c = 0; c < a; c++)
+		newstr[c] = s1[c];
+	for (c = a; c <= (a + b); c++, d++)
+		newstr[c] = s2[d];
+	return (newstr);
 }
