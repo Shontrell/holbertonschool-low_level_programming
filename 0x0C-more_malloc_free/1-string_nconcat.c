@@ -40,5 +40,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		newstr[c] = s1[c];
 	for (c = a; c < (a + b); c++, d++)
 		newstr[c] = s2[d];
+	newstr[c] = '\0';
 	return (newstr);
 }
