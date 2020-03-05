@@ -9,14 +9,10 @@ void *malloc_checked(unsigned int b)
 {
 	int *p;
 
-	p = (int*)malloc(sizeof(int) * b);
+	p = malloc(sizeof(double) * b);
 	if (p == NULL)
 	{
 		return (NULL);
-	}
-	else
-	{
-		return (p);
 	}
 	exit (98);
 }
