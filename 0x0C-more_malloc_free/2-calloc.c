@@ -23,7 +23,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		free(p);
 		return (NULL);
 	}
-	for (count = 0; count < size; count++)
+	for (count = 0; count < (nmemb * size); count++)
 	{
 		p[count] = 0;
 	}
