@@ -13,11 +13,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	int numb;
 
 	va_start(ap, n);
-
-	if (n == 0)
-	{
-		return;
-	}
 	for (x = 0; x < n; x++)
 	{
 		numb = va_arg(ap, int);
