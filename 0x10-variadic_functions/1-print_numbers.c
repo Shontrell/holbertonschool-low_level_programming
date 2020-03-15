@@ -15,7 +15,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	if (separator == NULL)
 	{
-		va_end(ap);
 		return;
 	}
 	if (n == 0)
