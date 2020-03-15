@@ -23,10 +23,17 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		numb = va_arg(ap, int);
 		if (x == (n - 1))
 			printf("%d", numb);
-		if (separator != NULL)
-			printf("%d%s ", numb, separator);
 		else
-			printf("%d", numb);
+		{
+			if (separator != NULL)
+			{
+			printf("%d%s ", numb, separator);
+			}
+			else
+			{
+				printf("%d", numb);
+			}
+		}
 	}
 	printf("\n");
 	va_end(ap);
