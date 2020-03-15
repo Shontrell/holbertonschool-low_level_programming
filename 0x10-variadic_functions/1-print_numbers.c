@@ -13,10 +13,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(ap, n);
 
-	if (separator == NULL)
-	{
-		return;
-	}
 	if (n == 0)
 	{
 		return;
@@ -30,7 +26,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		}
 		else
 		{
-		printf("%d%s ", numb, separator);
+			if (separator != NULL)
+				printf("%d%s ", numb, separator);
 		}
 	}
 	printf("\n");
