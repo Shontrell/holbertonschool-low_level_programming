@@ -1,6 +1,4 @@
 #include "calc.h"
-#include <stdio.h>
-#include <stdlib.h>
 /**
  * op_add - returns sum of a and b
  * @a: int 1
