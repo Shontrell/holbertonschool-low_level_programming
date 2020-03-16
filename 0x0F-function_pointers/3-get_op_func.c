@@ -1,8 +1,8 @@
 #include "calc.h"
 #include <stdio.h>
 /**
- * (*get_op_func(char *s)) - selects the correct function to perform operation
- * @s: operator needed for operation
+ * *get_op_func - selects the correct function to perform operation
+ * @s: operator
  * Return: pointer to a function corresponding to the given operator
  */
 int (*get_op_func(char *s))(int, int)
