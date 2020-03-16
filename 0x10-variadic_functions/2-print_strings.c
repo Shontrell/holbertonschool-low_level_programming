@@ -2,20 +2,20 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- * print_numbers - prints numbers, followed by a new line
+ * print_strings - prints numbers, followed by a new line
  * @separator: pointer to char
  * @n: unsigned int
  */
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
         va_list ap;
         unsigned int x;
-        int *str;
+        char *str;
 
         va_start(ap, n);
         for (x = 0; x < n; x++)
         {
-                str = va_arg(ap, int);
+                str = va_arg(ap, char *);
 		if (str == NULL)
 			printf("nil");
                 if (x == (n - 1))
