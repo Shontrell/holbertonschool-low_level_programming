@@ -9,7 +9,7 @@
 size_t print_list(const list_t *h)
 {
 	int node, nolen = 0;
-	char *nil = (nil);
+	char *nil = "(nil)";
 
 	if (h == NULL)
 	{
