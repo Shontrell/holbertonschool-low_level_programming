@@ -19,12 +19,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		free(insert);
 		return (NULL);
 	}
-	if (idx == 1)
+	if (idx == 0)
 	{
 		insert->next = *head;
 		*head = insert;
 	}
-	for (i = 0; i < (idx - 1); i++)
+	for (i = 0; i < idx - 1; i++)
 	{
 		hold = hold->next;
 	}
