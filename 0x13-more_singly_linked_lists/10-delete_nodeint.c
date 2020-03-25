@@ -22,10 +22,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	for (i = 0; dnode != NULL && i < index - 1; i++)
 	{
-		if (i == index)
-		{
-			break;
-		}
 		dnode = dnode->next;
 	}
 	hold = dnode->next->next;
