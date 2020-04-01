@@ -1,4 +1,5 @@
 #include "holberton.h"
+#define SE STDERR_FILENO
 /**
  * main - Entry Point
  * @argc: number of arguments
@@ -7,30 +8,41 @@
  */
 int main(int argc, char **argv)
 {
-	int ft, ff, r, c1, c2;
+	int ft, ff, r, c1, c2, w;
 	char buff[1024];
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		dprintf(SE, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	ft = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-        ff = open (argv[1], O_RDONLY);
-	if (ff == -1)
+	ff = open(argv[1], O_RDONLY);
+	if (argv[1] == NULL || ff == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", ff);
+		dprintf(SE, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	if (ft == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %d\n", ft);
+		dprintf(SE, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	r = read(ff, buff, 1024);
+	if (r == -1)
+	{
+		dprintf(SE, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
 	while (r > 0)
 	{
-		write(ft, buff, r);
+		w = write(ft, buff, r);
+		if (w == -1)
+		{
+			dprintf(SE, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
+		read(ff, buff, 1024);
 
 	}
 	c1 = close(ff);
