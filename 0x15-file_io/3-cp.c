@@ -8,7 +8,7 @@
  */
 int main(int argc, char **argv)
 {
-	int ft, ff, r, c1, c2, w;
+	int ft, ff, r, c1, c2;
 	char buff[1024];
 
 	if (argc != 3)
@@ -36,25 +36,20 @@ int main(int argc, char **argv)
 	}
 	while (r > 0)
 	{
-		w = write(ft, buff, r);
-		if (w == -1)
-		{
-			dprintf(SE, "Error: Can't write to %s\n", argv[2]);
-			exit(99);
-		}
+		write(ft, buff, r);
 		read(ff, buff, 1024);
 
 	}
 	c1 = close(ff);
 	if (c1 == -1)
 	{
-		dprintf(STDERR_FILENO, "Can't close fd %d\n", ff);
+		dprintf(SE, "Can't close fd %s\n", argv[1]);
 		exit(100);
 	}
 	c2 = close(ft);
 	if (c2 == -1)
 	{
-		dprintf(STDERR_FILENO, "Can't close fd %d\n", ft);
+		dprintf(SE, "Can't close fd %s\n", argv[2]);
 		exit(100);
 	}
 	return (0);
